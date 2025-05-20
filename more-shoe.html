@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 Collection - Shoe Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .collection-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .user-menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .collection-title {
+            font-size: 32px;
+            margin: 40px 0;
+            color: #333;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-price {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .product-name {
+            margin: 5px 0;
+        }
+
+        .product-brand {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .favorite-btn {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ff4d4d;
+        }
+
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .slider-btn {
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            pointer-events: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .prev-btn { float: left; }
+        .next-btn { float: right; }
+
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <h2 class="logo"> store.</h2>
+                    <a href="index.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="more-shoe.html">Colletions</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+    <div class="collection-container">
+        <h1 class="collection-title">2024 Collection</h1>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <a href="products/Air Jordan 1 Phat Mid Olympic sneakers.html">  <img src="image/Air Jordan 1 Phat Mid Olympic sneakers.png" alt="Pump Omni Zone II" class="product-image"></a>
+                <div class="product-price">$235</div>
+                <h3 class="product-name">Air Jordan 1 Phat Mid Olympic sneakers</h3>
+                <div class="product-brand">Reebok</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/green nike sneaker shoe.html"> <img src="image/green nike sneaker shoe.png" alt="ULTRABOOST 22" class="product-image"></a>               
+                <div class="product-price">$190</div>
+                <h3 class="product-name">green nike sneaker shoe</h3>
+                <div class="product-brand">Adidas</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/nike adivita.html"><img src="image/nike adivita.png" alt="Air Zoom Pegasus" class="product-image"></a>
+                <div class="product-price">$150</div>
+                <h3 class="product-name">nike adivita</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+            <div class="product-card">
+                <a href="products/nike-air-max.html"><img src="image/Nike Air Max.png" alt="Nike Air Max" class="product-image"></a>
+                <div class="product-price">$150</div>
+                <h3 class="product-name">Nike Air Max</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+            <div class="product-card">
+                <a href="products/Nike NOCTA Glide.html"><img src="image/Nike NOCTA Glide.png" alt="Air Zoom Pegasus" class="product-image">
+                </a>
+                
+                <div class="product-price">$150</div>
+                <h3 class="product-name">Nike NOCTA Glide</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+            <div class="product-card">
+                <a href="products/Nike Shoes Outfits Men Mens Fashion.html"><img src="image/Nike Shoes Outfits Men Mens Fashion.png" alt="Air Zoom Pegasus" class="product-image"></a>                
+                <div class="product-price">$150</div>
+                <h3 class="product-name">Nike Shoes Outfits Men Mens Fashion</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+            <div class="product-card">
+                <a href="products/Nike Terrascape Plus Sneakers - Neutrals.html">
+                    <img src="image/Nike Terrascape Plus Sneakers - Neutrals.png" alt="Air Zoom Pegasus" class="product-image">
+                </a>                
+                <div class="product-price">$150</div>
+                <h3 class="product-name">Nike Terrascape Plus Sneakers - Neutrals</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+            <div class="product-card">
+                <a href="products/orage nike shoe.html"> <img src="image/orage nike shoe.png" alt="Air Zoom Pegasus" class="product-image"></a>
+               
+                <div class="product-price">$150</div>
+                <h3 class="product-name">orage nike shoe</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="collection-container">
+        <h1 class="collection-title">2025 Collection</h1>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <a href="products/Rick Owens x Adidas Mastodon.html"><img src="image/Rick Owens x Adidas Mastodon.png" alt="Rick Owens x Adidas Mastodon" class="product-image"></a>
+                <div class="product-price">$235</div>
+                <h3 class="product-name">Rick Owens x Adidas Mastodon</h3>
+                <div class="product-brand">Reebok</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/sneacar.html"><img src="image/sneacar.png" alt="sneacar" class="product-image"></a>                
+                <div class="product-price">$190</div>
+                <h3 class="product-name">sneacar</h3>
+                <div class="product-brand">Adidas</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/sneakers running shoes trend.html"> <img src="image/sneakers running shoes trend.png" alt="sneakers running shoes trend" class="product-image">
+                </a>               
+                <div class="product-price">$150</div>
+                <h3 class="product-name">sneakers running shoes trend</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/snkrs.html"> <img src="image/snkrs.png" alt="snkrs" class="product-image">
+                </a>
+                <div class="product-price">$150</div>
+                <h3 class="product-name">snkrs</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/The Air Jordan 1 “Lost & Found” Releases Tomorrow.html"><img src="image/The Air Jordan 1 “Lost & Found” Releases Tomorrow.png" alt="The Air Jordan 1 Lost & Found Releases Tomorrow" class="product-image">
+                </a>
+                <div class="product-price">$150</div>
+                <h3 class="product-name">The Air Jordan 1 "Lost & Found" Releases Tomorrow</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/The base colorway is a light mint green and white.html"><img src="image/The base colorway is a light mint green and white.png" alt="The base colorway is a light mint green and white" class="product-image">
+                </a>
+                <div class="product-price">$150</div>
+                <h3 class="product-name">The base colorway is a light mint green and white</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+             <div class="product-card">
+                <a href="products/Women's Shoes _ adidas US.html"><img src="image/Women's Shoes _ adidas US.png" alt="Women's Shoes adidas US" class="product-image">
+                </a>
+                <div class="product-price">$150</div>
+                <h3 class="product-name">Women's Shoes adidas US</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+
+            <div class="product-card">
+                <a href="products/ZoomX foam.html"><img src="image/ZoomX foam.png" alt="ZoomX foam" class="product-image"></a>
+                
+                <div class="product-price">$275</div>
+                <h3 class="product-name">ZoomX foam</h3>
+                <div class="product-brand">Nike</div>
+                <button class="favorite-btn">❤️</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+    <script>
+        // Add heart button functionality
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.textContent = this.textContent === '❤️' ? '🤍' : '❤️';
+            });
+        });
+    </script>
+</body>
+</html>

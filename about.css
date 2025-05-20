@@ -1,0 +1,223 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+      background-color: rgb(224, 118, 80);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links a,
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.profile-pic {
+    width: 200px;
+    height: auto;
+    border-radius: 60px;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.learn-more {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* Clients section */
+.clients {
+    padding: 4rem 2rem;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.client-logos img {
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Services section */
+.services {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.service-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    text-align: left;
+}
+
+.service-card img {
+    width: 40px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* Contact section */
+.contact {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.contact-buttons button {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.email-me {
+    background: #333;
+    color: white;
+    border: none;
+}
+
+.whatsapp {
+    background: white;
+    border: 1px solid #333;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-logos {
+        gap: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        margin: 0 1rem;
+    }
+}
+
+
+/* Add these animation styles at the end of your CSS file */
+
+/* Button hover animations */
+.learn-more, .email-me, .whatsapp {
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover, .email-me:hover, .whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link hover animations */
+.social-links a, .contact-info a, .footer-links a {
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.social-links a:hover, .contact-info a:hover, .footer-links a:hover {
+  transform: scale(1.05);
+  color: #000;
+}
+
+/* Service card hover animation */
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Client logo hover animation */
+.client-logos img {
+  transition: all 0.3s ease;
+}
+
+.client-logos img:hover {
+  transform: scale(1.1);
+}

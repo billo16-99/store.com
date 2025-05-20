@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Air Max - Shoe Store</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <nav class="header">
+        <div class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="../more-shoe.html">Collection</a>
+        </div>
+    </nav>
+
+    <div class="product-details">
+        <div class="product-gallery">
+            <img src="../image/Nike Air Max.png" alt="Nike Air Max" class="main-image">
+        </div>
+        
+        <div class="product-info">
+            <h1 class="product-title">Nike Air Max</h1>
+            <div class="product-brand">Nike</div>
+            <div class="product-price">$150.00</div>
+            
+            <div class="size-selector">
+                <h3>Select Size</h3>
+                <div class="size-options">
+                    <div class="size-option">40</div>
+                    <div class="size-option">41</div>
+                    <div class="size-option">42</div>
+                    <div class="size-option">43</div>
+                    <div class="size-option">44</div>
+                </div>
+            </div>
+            
+            <div class="quantity-selector">
+                <h3>Quantity</h3>
+                <button class="quantity-btn minus">-</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn plus">+</button>
+            </div>
+            
+            <button class="buy-button">Buy Now</button>
+            
+            <div class="product-description">
+                <h3>Product Description</h3>
+                <p>The Nike Air Max delivers unparalleled comfort and style with its iconic Air cushioning technology. Perfect for both casual wear and athletic performance, this shoe combines modern design with classic Nike innovation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Size selection
+        const sizeOptions = document.querySelectorAll('.size-option');
+        sizeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+        // Quantity controls
+        const minusBtn = document.querySelector('.minus');
+        const plusBtn = document.querySelector('.plus');
+        const quantitySpan = document.querySelector('.quantity');
+
+        minusBtn.addEventListener('click', () => {
+            let quantity = parseInt(quantitySpan.textContent);
+            if (quantity > 1) {
+                quantitySpan.textContent = quantity - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let quantity = parseInt(quantitySpan.textContent);
+            if (quantity < 10) {
+                quantitySpan.textContent = quantity + 1;
+            }
+        });
+
+        // Buy button
+        const buyButton = document.querySelector('.buy-button');
+        buyButton.addEventListener('click', () => {
+            const selectedSize = document.querySelector('.size-option.selected');
+            if (!selectedSize) {
+                alert('Please select a size');
+                return;
+            }
+            alert('Thank you for your purchase!');
+        });
+    </script>
+</body>
+</html>
