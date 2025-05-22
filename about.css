@@ -20,6 +20,9 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow nav items to wrap if needed */
+    gap: 1rem; /* Add gap for wrapped items, effective if it wraps before 420px */
     max-width: 1200px;
     margin: 0 auto;
 }

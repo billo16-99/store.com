@@ -30,7 +30,7 @@ li{
 
 a{
   text-decoration: none;
-  margin-left: 100px;
+  margin-left: 20px; /* Reduced from 100px */
   color: black;
 }
 
@@ -364,4 +364,75 @@ img {
 
 img:hover {
   transform: scale(1.02);
+}
+
+/* Responsive Header Navigation */
+@media (max-width: 768px) {
+  header {
+    top: 0; /* Reset top offset */
+    padding-top: 10px; /* Add some padding */
+  }
+
+  header nav ul {
+    padding: 0; /* Remove default padding */
+  }
+
+  header nav ul li {
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: center; /* Center items when stacked */
+    margin-left: 0; /* Reset margin for li */
+    padding: 10px 0; /* Vertical padding for li */
+  }
+
+  .logo {
+    position: static; /* Remove fixed/absolute positioning for flow */
+    right: auto;
+    margin-right: 0; /* Remove margin when stacked */
+    margin-left: 0; /* Reset left margin for logo */
+    margin-bottom: 10px; /* Space below logo */
+    font-size: 1.8em; /* Adjust logo size */
+  }
+
+  header nav ul li a {
+    margin-left: 0; /* Remove left margin for stacked links */
+    padding: 8px 15px; /* Adjust padding for touch targets */
+    margin-bottom: 5px; /* Space between stacked links */
+    width: 100%; /* Make links take full width for easier tapping */
+    text-align: center; /* Center text in links */
+  }
+
+  /* Adjust main content start if header height changes significantly */
+  /* These are specific to index.html elements that had absolute positioning */
+  .NI, .KE, .pic0 img {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    text-align: center;
+    margin: 10px auto; /* Basic centering and spacing */
+  }
+  .NI, .KE {
+    font-size: 60px !important; /* Drastically reduce font size */
+  }
+  .pic0 img {
+    width: 70% !important; /* Responsive width */
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.6em; /* Further adjust logo size */
+    }
+    header nav ul li a {
+        padding: 7px 12px; /* Further adjust link padding */
+        font-size: 0.95em;
+    }
+    .NI, .KE {
+        font-size: 45px !important;
+    }
+    .pic0 img {
+      width: 60% !important;
+      max-width: 280px;
+    }
 }
