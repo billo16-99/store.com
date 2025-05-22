@@ -1,0 +1,127 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4; /* Neutral background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Sign-in Container Styling */
+.signin-container {
+    background-color: white;
+    padding: 2.5rem; /* Generous padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle lifting effect */
+    max-width: 420px; /* Max width for the container */
+    width: 90%; /* Responsive width */
+}
+
+/* Form Elements Styling */
+.signin-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1.25rem; /* Space between input groups */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px; /* Comfortable padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    font-size: 1rem;
+    /* box-sizing: border-box; is already globally set */
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem; /* Space above the button */
+}
+
+.signin-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.ancillary-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.ancillary-links a {
+    color: #007bff;
+    text-decoration: none;
+    display: block; /* Stack links */
+    margin-top: 0.75rem; /* Space between links */
+    font-size: 0.9rem;
+}
+
+.ancillary-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design Adjustments (Optional, as base is quite responsive) */
+@media (max-width: 480px) {
+    .signin-container {
+        padding: 2rem; /* Slightly reduce padding on very small screens */
+        width: 95%; /* Allow a bit more width if needed */
+    }
+
+    .signin-container h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+        margin-bottom: 1.25rem;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="password"] {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .signin-btn {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .ancillary-links a {
+        font-size: 0.85rem;
+        margin-top: 0.6rem;
+    }
+}
